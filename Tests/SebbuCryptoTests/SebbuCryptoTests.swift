@@ -2,6 +2,7 @@ import XCTest
 import SebbuCrypto
 
 final class SebbuCryptoTests: XCTestCase {
+    @available(iOS 13.2, *)
     func testHMAC256SignatureAndVerification() {
         let key = SymmetricKey(size: .bits256)
         let data = [UInt8]("Hello this data is some test data... We are now going to make a signature out of it".utf8)

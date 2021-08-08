@@ -13,6 +13,7 @@ public func HMACSHA256Signature(_ data: [UInt8], key: SymmetricKey) -> [UInt8] {
     return [UInt8](signature)
 }
 
+@available(iOS 13.2, *)
 @inlinable
 public func HMACSHA256Verify(_ data: [UInt8], signature: [UInt8], key: SymmetricKey) -> Bool {
     HMAC<SHA256>.isValidAuthenticationCode(signature, authenticating: data, using: key)
@@ -24,6 +25,7 @@ public func HMACSHA512Signature(_ data: [UInt8], key: SymmetricKey) -> [UInt8] {
     return [UInt8](signature)
 }
 
+@available(iOS 13.2, *)
 @inlinable
 public func HMACSHA512Verify(_ data: [UInt8], signature: [UInt8], key: SymmetricKey) -> Bool {
     HMAC<SHA512>.isValidAuthenticationCode(signature, authenticating: data, using: key)
@@ -38,6 +40,7 @@ public func HMACSHA256Signature(_ data: Data, key: SymmetricKey) -> Data {
     return Data(signature)
 }
 
+@available(iOS 13.2, *)
 @inlinable
 public func HMACSHA256Verify(_ data: Data, signature: Data, key: SymmetricKey) -> Bool {
     HMAC<SHA256>.isValidAuthenticationCode(signature, authenticating: data, using: key)
@@ -49,6 +52,7 @@ public func HMACSHA512Signature(_ data: Data, key: SymmetricKey) -> Data {
     return Data(signature)
 }
 
+@available(iOS 13.2, *)
 @inlinable
 public func HMACSHA512Verify(_ data: Data, signature: Data, key: SymmetricKey) -> Bool {
     HMAC<SHA512>.isValidAuthenticationCode(signature, authenticating: data, using: key)
